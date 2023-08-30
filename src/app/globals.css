@@ -3,25 +3,73 @@
 @tailwind utilities;
 
 :root {
-  --foreground-rgb: 0, 0, 0;
-  --background-start-rgb: 214, 219, 220;
-  --background-end-rgb: 255, 255, 255;
-}
-
-@media (prefers-color-scheme: dark) {
-  :root {
-    --foreground-rgb: 255, 255, 255;
-    --background-start-rgb: 0, 0, 0;
-    --background-end-rgb: 0, 0, 0;
-  }
+  --textDark: #0b132b;
+  --richBlack: #040404;
+  --blue: #1d3461;
+  --teal: #247ba0;
+  --action: #247ba0;
+  --actionHover: #095b6c;
+  --offWhite: #eee;
+  --offWhiteBG: #f1f1f1;
 }
 
 body {
-  color: rgb(var(--foreground-rgb));
-  background: linear-gradient(
-      to bottom,
-      transparent,
-      rgb(var(--background-end-rgb))
-    )
-    rgb(var(--background-start-rgb));
+  font-family: Lato, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto,
+    Oxygen, Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
+  color: var(--textDark);
+  overflow-x: hidden;
+  -webkit-font-smoothing: antialiased;
+  background-color: var(--offWhiteBG);
+}
+
+/* Headings */
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-weight: 900;
+}
+
+h1 {
+  font-size: 2.6rem;
+  text-align: center;
+  margin-top: 20px;
+}
+
+a {
+  color: var(--action);
+  text-decoration: none;
+  transition: 200ms;
+}
+
+a:hover {
+  color: var(--actionHover);
+}
+
+blockquote {
+  background: white;
+  padding: 1px 20px;
+  border-left: 4px solid var(--teal);
+  border-radius: 0 5px 5px 0;
+  box-shadow: 2px 2px 8px rgba(0, 0, 0, 0.05);
+}
+
+.container {
+  flex: 1;
+  max-width: calc(800px + 8vw);
+  margin: 0 auto;
+  padding: 0 4vw;
+}
+
+/* Code syntax overrides */
+code,
+kbd,
+samp {
+  font-size: 0.8em;
+}
+
+:not(pre) > code[class*="language-"] {
+  padding: 0.1em 0.3em !important;
 }
