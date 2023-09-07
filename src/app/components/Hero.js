@@ -11,7 +11,7 @@ export default function Hero() {
 
         <div className="max-w-lg leading-8 text-lg md:text-xl mt-8">
           <p className="mb-4">
-            <Emoji emoji="🌱" label="seedling" />
+            <Emoji emoji="👨‍💻" label="developer" />
             <span className="px-1" />
             I&apos;m a developer and maker, building with React and JavaScript.
             Welcome to my digital garden.

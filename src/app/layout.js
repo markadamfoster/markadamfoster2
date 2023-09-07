@@ -1,6 +1,7 @@
 import "./globals.css";
 import { Lato } from "next/font/google";
 import StyledComponentsRegistry from "../lib/registry";
+import Header from "components/Header";
 
 // const inter = Inter({ subsets: ["latin"] });
 const lato = Lato({
@@ -19,7 +20,10 @@ export default function RootLayout({ children }) {
   return (
     <html lang="en" className={lato.className}>
       <body>
-        <StyledComponentsRegistry>{children}</StyledComponentsRegistry>
+        <StyledComponentsRegistry>
+          <Header />
+          {children}
+        </StyledComponentsRegistry>
       </body>
     </html>
   );
